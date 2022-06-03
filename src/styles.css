@@ -99,7 +99,7 @@ main{
     padding: 20px;
     display: flex;
     flex-direction: column;  
-
+    
 }
 
 .tip{
@@ -226,6 +226,9 @@ input[type='text']{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 30px;
+    }
+    .result{
+        height: 100%;
     }
     .result-content{
         display: flex;
