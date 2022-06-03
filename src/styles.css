@@ -1,1 +1,248 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+
+:root{
+    --BGBodyColor:hsl(185, 41%, 84%);
+    --BGMainColor:hsl(0, 0%, 100%);
+    --InputTextColor:hsl(183, 100%, 15%);
+    --BotonTextColor:hsl(0, 0%, 100%);
+    --BGBotonColor:hsl(183, 100%, 15%);
+    --BotonTextColorHover:hsl(183, 100%, 15%);
+    --BGBotonColorHover:hsl(185, 41%, 84%);
+    --BGBotonColorActive:hsl(172, 67%, 45%);
+    --BGInputTextColor:hsl(185, 41%, 97%);
+    --TextPlaceHolderColor:hsl(186, 14%, 43%);
+    --LabelTextColor:hsl(186, 14%, 43%);
+    --BGSectionResultColor:hsl(183, 100%, 15%);
+    --ColorTitle:hsl(0, 0%, 100%);
+    --ColorSubTitle:hsl(186, 14%, 43%);
+    --ColorSpanResult:hsl(172, 67%, 45%);
+    --BGBotonReset:hsl(172, 67%, 45%);
+    --BotonTextReset:hsl(183, 100%, 15%);
+    --BGBotonResetHover:hsl(172, 67%, 75%);
+    --Tablet:768px;
+    --Desktop:1024px;
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--BGBodyColor);
+}
+
+app-root{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--BGMainColor);
+    width: 100%;
+    height: 100vh;
+    display: flex;    
+    flex-direction: column;
+    align-self: center;
+    padding-right: 25px; 
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.acount,.content-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   
+    margin-bottom: 20px; 
+}
+.label{
+    color: var(--LabelTextColor);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.grid-buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(80px,1fr));
+    grid-template-rows: repeat(3,40px);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+.result{
+    background-color: var(--BGSectionResultColor);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;  
+
+}
+
+.tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.tip-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-result{
+    color: var(--ColorSpanResult);
+    display: flex;
+    align-self: center;
+    font-size: 2rem;
+
+}
+ 
+span > i {
+    margin-right: 5px;    
+}
+
+i > svg >path{
+    fill: var(--ColorSpanResult);
+    font-size: 2rem;
+}
+
+.title{
+    color: var(--ColorTitle);
+    font-size: 0.9rem;
+}
+
+.subtitle{
+    color: var(--ColorSubTitle);
+    font-size: 0.7rem;
+}
+
+.boton-reset{
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--BGBotonReset);
+    outline: none;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--BGSectionResultColor);    
+}
+
+.boton-reset:hover{
+    background-color: var(--BGBotonResetHover);
+}
+
+.boton{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: var(--BGBotonColor);
+    color: var(--BotonTextColor);
+}
+
+.boton:hover{
+    background-color: var(--BGBotonResetHover);
+    color: var(--BotonTextColorHover);
+}
+
+.input-wrapper{
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper > svg {
+    position: absolute;    
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+input[type='text']{
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: var(--BGInputTextColor);
+    border-radius: 5px;
+    font-size: 1.8rem;
+    color: var(--InputTextColor);    
+    text-align: right;  
+    padding: 10px;  
+    width: 100%;
+}
+
+.attribution {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+@media (min-width:768px){
+    main{
+        width: 80%;
+        height: auto;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
+    }
+    .spacer{
+        flex: 1 1 auto;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 30px;
+    }
+    .result-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+    .boton-reset{
+        align-self: flex-end;
+    }
+}
+@media (min-width:1024px){
+    main{
+        width: 70%;
+        height: 50%;
+    }
+    
+
+}
+
