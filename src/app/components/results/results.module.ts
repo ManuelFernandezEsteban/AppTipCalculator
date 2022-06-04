@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResultsComponent } from './results.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [ResultsComponent],
   imports: [
-    CommonModule
+    CommonModule,FormsModule
   ],
   exports:[ResultsComponent]
 })

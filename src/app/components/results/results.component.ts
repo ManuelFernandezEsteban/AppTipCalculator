@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TipService } from '../../services/tip.service';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public tipService:TipService) { }
 
   ngOnInit(): void {
+  }
+
+  reset(){
+    this.tipService.reset();
   }
 
 }

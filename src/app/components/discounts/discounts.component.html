@@ -3,12 +3,12 @@
     <span class="label">Select Tip %</span>
     <div class="grid-buttons">
       
-      <input type="button" value="5%" class="boton">
-      <input type="button" value="10%" class="boton">
-      <input type="button" value="15%" class="boton">
-      <input type="button" value="25%" class="boton">
-      <input type="button" value="50%" class="boton">
+      <input type="button" value="5%" class="boton" (click)="calcular($event)">
+      <input type="button" value="10%" class="boton" (click)="calcular($event)">
+      <input type="button" value="15%" class="boton" (click)="calcular($event)">
+      <input type="button" value="25%" class="boton" (click)="calcular($event)">
+      <input type="button" value="50%" class="boton" (click)="calcular($event)">
       
-      <input type="text" name="custom" id="custom" placeholder="Custom">
+      <input type="text" name="custom" id="custom" placeholder="Custom" (change)="calcular($event)"  [(ngModel)]="tipService.discount">
     </div>
   </section>
