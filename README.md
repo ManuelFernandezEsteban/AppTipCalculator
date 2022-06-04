@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/ManuelFernandezEsteban/AppTipCalculator.git)
+- Live Site URL: [Netlify](https://snazzy-bublanina-173446.netlify.app)
 
 ## My process
 
